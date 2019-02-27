@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none;
+}
+:host #slot::slotted(*) {
+  font-family: "Roboto", sans-serif;
+}
+
+/**
+ * Hide the slotted content during edit mode. This must be here to work.
+ */
+:host([edit-mode]) #slot {
+  display: none;
+}

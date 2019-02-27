@@ -1,0 +1,45 @@
+{
+  /**
+    * editting state for the page
+    */
+  editMode: {
+    type: Boolean,
+    reflectToAttribute: true,
+    observer: "_editModeChanged"
+  },
+  /**
+    * Active item which is in JSON Outline Schema
+    */
+  activeItem: {
+    type: Object
+  },
+  /**
+    * a manifest json file decoded, in JSON Outline Schema format
+    */
+  manifest: {
+    type: Object,
+  },
+  /**
+    * DOM node that wraps the slot
+    */
+  contentContainer: {
+    type: Object,
+    value: null,
+    observer: "_contentContainerChanged"
+  },
+  /**
+    * active manifest index, key to location in the manifest itemsarray
+    */
+  activeManifestIndex: {
+    type: Number,
+    value: -1
+  },
+  /**
+   * The "page" to show (overview or blog post itself).
+   */
+  selectedPage: {
+    type: Number,
+    reflectToAttribute: true,
+    value: 0,
+  },
+}

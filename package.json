@@ -1,0 +1,61 @@
+{
+  "name": "@custom-examples/odl-haxtheme",
+  "wcfactory": {
+    "className": "OdlHaxtheme",
+    "customElementClass": "PolymerElement",
+    "elementName": "odl-haxtheme",
+    "generator-wcfactory-version": "0.7.0",
+    "useHAX": false,
+    "useSass": false,
+    "files": {
+      "css": "src/odl-haxtheme.css",
+      "scss": "src/odl-haxtheme.scss",
+      "html": "src/odl-haxtheme.html",
+      "js": "src/odl-haxtheme.js",
+      "properties": "src/odl-haxtheme-properties.json",
+      "hax": "src/odl-haxtheme-hax.json"
+    }
+  },
+  "version": "0.0.0",
+  "description": "ODL custom site theme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:custom-examples/custom-examples.git"
+  },
+  "main": "odl-haxtheme.js",
+  "module": "odl-haxtheme.es6.js",
+  "umd": "odl-haxtheme.umd.js",
+  "amd": "odl-haxtheme.amd.js",
+  "scripts": {
+    "test": "../../node_modules/.bin/wct --configFile ../../wct.conf.json node_modules/@custom-examples/odl-haxtheme/test/",
+    "start":"yarn run dev","build":"../../node_modules/.bin/gulp && ../../node_modules/.bin/rollup -c && ../../node_modules/.bin/prettier --ignore-path ../../.prettierignore --write '**/*.{js,json}'","dev":"concurrently --kill-others \"yarn run watch\" \"yarn run serve\"","watch":"../../node_modules/.bin/gulp dev","serve":"polymer serve --npm --module-resolution=node --open","lighthouse":"../../node_modules/.bin/gulp lighthouse"
+  },
+  "author": {
+    "name": "btopro"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@polymer/polymer":"^3.0.5",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-icon-button": "^3.0.2",
+    "@polymer/iron-image": "^3.0.1",
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/iron-icon": "^3.0.1",
+    "@polymer/paper-tooltip": "^3.0.1",
+    "@polymer/paper-card": "^3.0.1",
+    "@lrnwebcomponents/haxcms-elements": "^2.0.7",
+    "@lrnwebcomponents/simple-colors": "^2.0.7",
+    "@polymer/iron-pages": "^3.0.1"
+  },
+  "devDependencies": {
+    "web-animations-js":"2.3.1","@lrnwebcomponents/deduping-fix":"0.2.0","@polymer/iron-demo-helpers":"3.0.2","@polymer/iron-component-page":"github:PolymerElements/iron-component-page","@webcomponents/webcomponentsjs":"2.2.1","concurrently":"4.1.0","gulp-babel":"8.0.0","gulp-sourcemaps":"2.6.4","lodash":"4.17.11","polymer-cli":"1.9.4","polymer-build":"3.1.1","wct-browser-legacy":"1.0.2"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "web-components",
+    "html"
+  ]
+}
